@@ -41,6 +41,8 @@ function openProductMenu() {
         //Slide menu and overlay appear
         slideMenu.classList.add('active');
         overlay.classList.add('active');
+        //Update aria-expanded for accessibility 
+        openMenu.setAttribute('aria-expanded', 'true');
     }, 1000);
 }
 
@@ -64,6 +66,8 @@ function closeProductMenu() {
         openMenu.classList.remove('active');
         //Remove close class animation 
         closeMenu.classList.remove('active');
+        //Update aria-expanded for accessibility 
+        openMenu.setAttribute('aria-expanded', 'false');
     }, 500);
 }
 
