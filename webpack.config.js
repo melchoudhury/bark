@@ -50,5 +50,5 @@ module.exports = {
       new CssMinimizerPlugin(),
     ],
   },
-  mode: 'development'
+  mode: 'production'
 };
