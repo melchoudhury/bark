@@ -1,4 +1,4 @@
-<h1>Live demo<h1>
+<h1>Live demo</h1>
 <a href="https://barkcommerce.netlify.app/" target="_blank">See live demo on Netlify here</a>
 <br>
 <h2>How to run</h2>
