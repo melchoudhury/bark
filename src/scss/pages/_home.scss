@@ -1,0 +1,116 @@
+//home main section
+//NOTE: I avoid nesting in BEM, so other developers can search for class names
+
+.home {
+    @include bp(desktop) {
+    position: relative;
+    height: 100vh;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        background: $offWhite;
+        width: 50%;
+        height: 100%;
+    }
+    }
+}
+
+.home__container {
+    @include bp(desktop) {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        margin: 0 auto;
+    }
+}
+
+//intro section
+
+.intro {
+    display: flex;
+    justify-content: center;
+    @include bp(desktop) {
+        width: 50%;
+        margin-bottom: 2rem;
+        // This is to make the intro sit higher on the page. If the text content is changed, I would remove this so the text is always aligned with the product card on the right
+    }
+}
+
+.intro__content {
+    text-align: center;
+    margin: 4rem 1.9rem;
+    max-width: 425px;
+    @include bp(desktop) {
+        margin: 0;
+    } 
+}
+
+//product section
+
+.product {
+    background: $offWhite;
+    @include bp(desktop) {
+        background: none;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.product__card {
+    padding: 4rem 1.9rem;
+    @include bp(desktop) {
+        padding: 0;
+        max-width: 316px;
+        min-width: 316px;
+    }
+}
+
+.product__container {
+    padding: 2rem 1.9rem 3rem;
+    background: $white;
+    box-shadow: 0 10px 31px rgba(0, 0, 0, 0.182);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 344px;
+    @include bp(desktop) {
+       min-height: 495px;
+       max-width: 316px;
+       margin: initial;
+    }
+}
+
+.product__img {
+    width: 100%;
+    max-width: 269px;
+    margin-bottom: 1rem;
+    object-fit: contain;
+    @include bp(desktop) {
+        max-width: 235px;
+    }
+}
+
+.product__heading {
+    margin-bottom: 1rem;
+}
+
+.product__price {
+    font-size: 15px;
+    margin-bottom: 1.25rem;
+    color: $orange;
+    font-family: $roboto;
+    font-weight: 500;
+    letter-spacing: 1px;
+    @include bp(desktop) {
+        font-size: 16px;
+        margin-bottom: 1rem;
+    }
+}

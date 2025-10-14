@@ -1,0 +1,137 @@
+// Slide menu
+.slide-menu {
+    position: fixed;
+    top: 0;
+    right: -326px;
+    width: 316px;
+    height: 100%;
+    background: white;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    @include bp(desktop) {
+        width: 428px;
+        right: -428px;
+    }
+    &.active {
+        right: 0;
+    }
+}
+
+.slide-menu__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.slide-menu__heading {
+    border-bottom: 1px solid $grey;
+    padding: 1rem 1.9rem;
+    @include bp(desktop) {
+        padding: 1.9rem 3.6rem 1.3rem;
+    }
+}
+
+.slide-menu__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    &.active {
+        animation: rotate 0.6s ease;
+    }
+}
+
+// Overlay
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    z-index: 999;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+//Loading icon 
+
+.loading-icon {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border: 5px solid $grey200;
+    border-top-color: $orange;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin 1s linear infinite;
+    z-index: 1300;
+    display: none;
+    &.active {
+        display: block;
+    }
+  }
+  
+  //Products
+
+.slide-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+.slide-menu__products-text-container {
+    display: flex;
+    gap: 1.6rem;
+    position: relative;
+    border-bottom: 1px solid $grey;
+    padding-bottom: 2rem;
+}
+
+.slide-menu__products-img {
+    width: 105px;
+    object-fit: contain;
+    @include bp(desktop) {
+        width: 126px;
+    }
+}
+
+.slide-menu__products {
+    padding: 2rem 1.9rem;
+}
+
+.slide-menu__bottom {
+    text-align: center;
+    gap: 1.1rem;
+    display: flex;
+    padding: 1.8rem 1.7rem 2rem;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid $grey;
+    @include bp(desktop) {
+        padding: 1.3rem 3.5rem 2.5rem;
+        gap: 1.6rem;
+    }
+}
+
+.slide-menu__subtotal-text {
+    font-size: 16px;
+        @include bp(desktop) {
+            font-size: 19px;
+            line-height: 1.5rem;
+        }
+}

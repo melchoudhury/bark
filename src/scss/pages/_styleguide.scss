@@ -1,0 +1,48 @@
+.styleguide-wrapper {
+    padding: 1rem;
+    h1,
+    h3,
+    p {
+        margin: 1rem 0;
+    }
+}
+
+.box-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+//Example to demonstrate nested styles
+
+.box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    font-family: $roboto;
+    padding: 10px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    &--orange {
+        background: $orange;
+    }
+    &--offwhite {
+        background: $offWhite;
+    }
+    &--grey {
+        background: $grey;
+    }
+    &--grey100 {
+        background: $grey100;
+    }
+    &--grey200 {
+        background: $grey200;
+    }
+    &--black {
+        background: $black;
+        color: white;
+    }
+    &--white {
+        background: $white;
+    }
+}

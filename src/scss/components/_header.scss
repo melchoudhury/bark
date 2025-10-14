@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1.9rem 0;
+    align-items: center;
+    @include bp(desktop) {
+        width: 100%;
+        padding-left: 3.25rem;
+        padding-right: 3.25rem;
+        padding-top: 3.5rem;
+        padding-bottom: 0;
+        position: fixed;
+    }
+}
+
+.logo {
+    width: 100px;
+}
+
+.header__bag-container {
+    width: 22px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.active {
+        animation: rotate 0.6s ease;
+    }
+    @include bp(desktop) {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.bag-number {
+    position: absolute;
+    top: 30%;
+    font-family: $roboto;
+    font-size: 13px;
+    font-weight: 600;
+}
