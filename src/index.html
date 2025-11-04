@@ -7,37 +7,6 @@
     <title>Bark Pet Supplies</title>
 </head>
 <body>
-    <div class="slide-menu" id="slideMenu" role="dialog" aria-modal="true" aria-labelledby="basketHeading">
-        <div class="slide-menu__container">
-            <div class="slide-menu__top">
-                <div class="slide-menu__heading">
-                    <div class="slide-menu__content">
-                        <p id="basketHeading" class="paragraph paragraph--large-title">Your Bag</p>
-                        <button class="close-btn" id="closeMenu" aria-label="close basket"><img src="<%= require('./images/svg/close.svg') %>" alt="Close icon" width="15" height="auto" /></button>
-                    </div>
-                </div>
-                <div class="slide-menu__products-container">
-                    <!-- Products data can be found on products.js added hardcoded values as a fall back -->
-                    <div class="product-card-data slide-menu__products">
-                        <div class="slide-menu__products-text-container">
-                            <img class="product-img-data slide-menu__products-img" src="<%= require('./images/png/chicken.png') %>" alt="Chicken flavour dog food bag">
-                            <div class="slide-menu__products-text">
-                                <p class="paragraph paragraph--large product-heading-data">Natures Menu Dog Food Can Chicken</p>
-                                <p class="paragraph paragraph--large product__price product-price-data">£22.81</p>
-                                <button class="paragraph paragraph--underline paragraph--underline--grey paragraph--caps">Remove</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slide-menu__bottom">
-                <p class="paragraph slide-menu__subtotal-text paragraph--bold">Subtotal: £22.81</p>
-                <button class="btn btn--primary btn--full-width">proceed to checkout</button>
-                <button id="continueShopping" class="paragraph paragraph--underline">Continue shopping</button>
-            </div>
-        </div>
-    </div>
-    <div class="overlay" id="overlay"></div>
     <div class="home">
         <div class="header">
             <img class="logo" src="<%= require('./images/svg/logo.svg') %>" alt="Bark logo" width="100" height="auto" />
@@ -71,5 +40,36 @@
             </div>
         </div>
     </div>
+    <div class="slide-menu" id="slideMenu" role="dialog" aria-modal="true" aria-labelledby="basketHeading">
+        <div class="slide-menu__container">
+            <div class="slide-menu__top">
+                <div class="slide-menu__heading">
+                    <div class="slide-menu__content">
+                        <p id="basketHeading" class="paragraph paragraph--large-title">Your Bag</p>
+                        <button class="close-btn" id="closeMenu" aria-label="close basket"><img src="<%= require('./images/svg/close.svg') %>" alt="Close icon" width="15" height="auto" /></button>
+                    </div>
+                </div>
+                <div class="slide-menu__products-container">
+                    <!-- Products data can be found on products.js added hardcoded values as a fall back -->
+                    <div class="product-card-data slide-menu__products">
+                        <div class="slide-menu__products-text-container">
+                            <img class="product-img-data slide-menu__products-img" src="<%= require('./images/png/chicken.png') %>" alt="Chicken flavour dog food bag">
+                            <div class="slide-menu__products-text">
+                                <p class="paragraph paragraph--large product-heading-data">Natures Menu Dog Food Can Chicken</p>
+                                <p class="paragraph paragraph--large product__price product-price-data">£22.81</p>
+                                <button class="paragraph paragraph--underline paragraph--underline--grey paragraph--caps">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-menu__bottom">
+                <p class="paragraph slide-menu__subtotal-text paragraph--bold">Subtotal: £22.81</p>
+                <button class="btn btn--primary btn--full-width">proceed to checkout</button>
+                <button id="continueShopping" class="paragraph paragraph--underline">Continue shopping</button>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
 </body>
 </html>

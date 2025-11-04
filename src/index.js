@@ -46,7 +46,6 @@ function openProductMenu() {
         openMenu.setAttribute('aria-expanded', 'true');
         // Disable focus on everything except slide menu for tabbing
         pageContent.inert = true;
-        overlay.inert = true;
          //Move focus into slide menu
         closeMenu.focus();
     }, 1000);
@@ -76,7 +75,6 @@ function closeProductMenu() {
         openMenu.setAttribute('aria-expanded', 'false');
         // Enable tabbing for rest of the page
         pageContent.inert = false;
-        overlay.inert = false;
         // Enable focus to trigger button
         openMenu.focus();
     }, 500);
