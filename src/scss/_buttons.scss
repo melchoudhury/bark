@@ -29,4 +29,8 @@ button {
             cursor: pointer;
         }
     }
+    &:focus {
+        outline: 1px solid $orange;
+        outline-offset: 4px;
+    }
 }
