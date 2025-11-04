@@ -26,6 +26,7 @@ const overlay = document.getElementById('overlay');
 const loadingIcon = document.getElementById('loadingIcon');
 const addToBagBtn = document.querySelectorAll('.addToBagBtn');
 const pageContent = document.querySelector('.home');
+const checkoutBtn = document.getElementById('checkout');
 
 
 // Open product menu
@@ -46,8 +47,8 @@ function openProductMenu() {
         openMenu.setAttribute('aria-expanded', 'true');
         // Disable focus on everything except slide menu for tabbing
         pageContent.inert = true;
-         //Move focus into slide menu
-        closeMenu.focus();
+         //Move focus into checkout btn
+        checkoutBtn.focus();
     }, 1000);
 }
 
@@ -75,7 +76,7 @@ function closeProductMenu() {
         openMenu.setAttribute('aria-expanded', 'false');
         // Enable tabbing for rest of the page
         pageContent.inert = false;
-        // Enable focus to trigger button
+        // Enable focus on basket
         openMenu.focus();
     }, 500);
 }
