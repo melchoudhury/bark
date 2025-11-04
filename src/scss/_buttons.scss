@@ -30,7 +30,10 @@ button {
         }
     }
     &:focus {
-        outline: 1px solid $orange;
-        outline-offset: 4px;
+        outline: none;
+        @include bp(desktop) {
+            outline: 1px solid $orange;
+            outline-offset: 4px;
+        }
     }
 }
