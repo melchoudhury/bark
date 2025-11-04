@@ -21,10 +21,11 @@ productCards.forEach(card => {
 const openMenu = document.getElementById('openMenu');
 const slideMenu = document.getElementById('slideMenu');
 const closeMenu = document.getElementById('closeMenu');
+const continueShopping = document.getElementById('continueShopping');
 const overlay = document.getElementById('overlay');
 const loadingIcon = document.getElementById('loadingIcon');
 const addToBagBtn = document.querySelectorAll('.addToBagBtn');
-const disableScroll = document.querySelector('.home');
+const pageContent = document.querySelector('.home');
 
 
 // Open product menu
@@ -43,6 +44,11 @@ function openProductMenu() {
         overlay.classList.add('active');
         //Update aria-expanded for accessibility 
         openMenu.setAttribute('aria-expanded', 'true');
+        // Disable focus on everything except slide menu for tabbing
+        pageContent.inert = true;
+        overlay.inert = true;
+         //Move focus into slide menu
+        closeMenu.focus();
     }, 1000);
 }
 
@@ -68,6 +74,11 @@ function closeProductMenu() {
         closeMenu.classList.remove('active');
         //Update aria-expanded for accessibility 
         openMenu.setAttribute('aria-expanded', 'false');
+        // Enable tabbing for rest of the page
+        pageContent.inert = false;
+        overlay.inert = false;
+        // Enable focus to trigger button
+        openMenu.focus();
     }, 500);
 }
 
@@ -76,4 +87,6 @@ function closeProductMenu() {
 closeMenu.addEventListener('click', closeProductMenu);
 
 overlay.addEventListener('click', closeProductMenu);
+
+continueShopping.addEventListener('click', closeProductMenu);
 
